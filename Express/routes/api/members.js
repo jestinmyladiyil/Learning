@@ -11,6 +11,7 @@ const members = require('../../Members');
 
 //Get all members
 router.get('/', (req,res) => {
+    console.log(db);
     db.collection('Pages').doc('Article').get().then(doc => {
         res.json(doc.content());
     }).catch(err => {
